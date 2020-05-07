@@ -1,0 +1,49 @@
+
+
+// .infor{
+//     position: relative;
+//     width: 400px;
+//     img{
+//         max-width: 100%;
+//         height: auto;
+//     }
+//     > h3{
+//         color: red;
+//         font-size: 30px;
+//         position: absolute;
+//         bottom: 0px;
+//         left: 10px;
+//         margin-right: 100px;
+//     }
+// }
+.big-square{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background:  orangered;
+    .small-square{
+        position: absolute;
+        width: 100px;
+        height: 100px; 
+        background: green; 
+        //chỉnh ở chính giữa   
+        // top: 50%;//3 cái đi chung với nhau
+        // left: 50%;
+        // transform: translateX(-50%) translateY(-50%);//50% của small-quare
+        bottom: 0;
+        right: 0;
+        transform: translateY(50%);
+        .square-50{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: white;
+            top: 50%;//cho ở chinh giữa
+            left: 50%;
+            transform: translate(-50%,-50%);
+            //phải có position mới xìa được z-index, nào lớn hơn sẽ đẩy lên trên
+            z-index: -1;//nó sẻ chìm xuống dưới cái khác nổi lên
+        }
+    }
+}
